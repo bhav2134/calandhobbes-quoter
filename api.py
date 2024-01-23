@@ -1,5 +1,5 @@
-from flask import Flask,jsonify,render_template,url_for
-import json
+from flask import Flask, jsonify
+from flask_cors import CORS
 import random
 
 quotes = [
@@ -70,6 +70,7 @@ quotes = [
 ]
 
 app = Flask(__name__)
+CORS(app)
 @app.route('/api/quotes/random')
 
 def generate_random_quote():
@@ -78,5 +79,5 @@ def generate_random_quote():
 
 #the json will run on "http://127.0.0.1:8080/api/quotes/random"
 if __name__ == "__main__":
-    app.run(port=8080) 
+    app.run(host="127.0.0.1", port=8080)
 
