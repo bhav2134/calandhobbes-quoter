@@ -28,3 +28,7 @@ To use the Calvin and Hobbes Quoter API, follow these steps:
 
    ```
    python api.py
+4. Head to the server to view the JSON file:
+
+   ```
+   http://127.0.0.1:8080/api/quotes/random
