@@ -32,3 +32,38 @@ To use the Calvin and Hobbes Quoter API, follow these steps:
 
    ```
    http://127.0.0.1:8080/api/quotes/random
+
+### Implementation
+
+This example demonstrates how to fetch random data from an API in various programming languages.
+
+## JavaScript/React
+
+```javascript
+import { useState, useEffect } from 'react';
+
+const useRandomData = (apiEndpoint) => {
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(apiEndpoint);
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  }, [apiEndpoint]);
+
+  return data;
+};
+
+// Example usage:
+const QuoteComponent = () => {
+  const quote = useRandomData('http://127.0.0.1:8080/api/quotes/random');
+
+  // Your component logic with the fetched data...
+};
