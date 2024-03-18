@@ -33,11 +33,11 @@ To use the Calvin and Hobbes Quoter API, follow these steps:
    ```
    http://127.0.0.1:8080/api/quotes/random
 
-### Implementation
+## Implementation
 
 This example demonstrates how to fetch random data from an API in various programming languages.
 
-## JavaScript/React
+### JavaScript/React
 
 ```javascript
 import { useState, useEffect } from 'react';
