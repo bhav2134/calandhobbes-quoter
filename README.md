@@ -17,8 +17,8 @@ To use the Calvin and Hobbes Quoter API, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/bhav2134/calandhobbes-quoter-api.git
-   cd calvinandhobbes-quoter-api
+   git clone https://github.com/bhav2134/calandhobbes-quoter
+   cd calandhobbes-quoter
 
 2. Install dependencies:
 
